@@ -1,4 +1,5 @@
 ﻿using Infrastructure.Services.AssetManagement;
+using Infrastructure.Services.Spawn;
 using Infrastructure.Services.StaticData;
 using UnityEngine;
 
@@ -20,4 +21,4 @@ namespace Infrastructure.Services.Factories
             _spawnService.Instantiate(_assetProvider.LoadResource(AssetPaths.EnemySpawnerPath));
         }
     }
-}
+ }

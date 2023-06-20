@@ -43,14 +43,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Knights
-    uniqueID: 4060677177
-    locked: 0
   - name: Ground
     uniqueID: 1209980191
     locked: 0
   - name: Decoration
     uniqueID: 3287745499
+    locked: 0
+  - name: Enemies
+    uniqueID: 1592298071
+    locked: 0
+  - name: Knights
+    uniqueID: 4060677177
     locked: 0
   - name: Buildings
     uniqueID: 1231165123

@@ -1,5 +1,5 @@
 ﻿using Infrastructure.GameState;
-using Infrastructure.Services;
+using Infrastructure.Services.Coroutines;
 using UnityEngine;
 using Zenject;
 
@@ -18,10 +18,5 @@ namespace Infrastructure
             _gameStateMachine.SwitchState<LoadLevelState>();
             DontDestroyOnLoad(gameObject);
         }
-    }
-
-    internal interface IGameStateMachine : IService
-    {
-        public void SwitchState<T>() where T : IGameState;
     }
 }

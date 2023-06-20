@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="70804a87-b71e-445a-95f1-8a3a8a4eb776" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -7,12 +25,15 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.State/IState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/BootstrapInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/IService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UnityComponents/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/BootstrapInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Core/Utilities/CoroutineRunner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.State/IState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UnityComponents/Startup.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -27,9 +48,7 @@
         <option value="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/ProjectInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/GameGameStateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Startup.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Startup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/GameFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/EnemySpawnerFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/Test.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Game.cs" />
         <option value="$PROJECT_DIR$/Assets/BootstrapInstaller.CoroutineRunner.cs" />
@@ -39,16 +58,42 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/LoadLevelGameState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Load/ISceneLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Coroutuines/CoroutineRunner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Bootstrapper.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameStateMachineInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Load/SceneLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/BootstrapInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/LoadLevelState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Coroutines/CoroutineRunner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/EnemySpawnerEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/EnemySpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/EnemySpawnPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/EnemySpawnEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawnPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/EnemySpawnerEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Enemies/EnemyTypeId.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/EnemySpawnPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/EnemySpawnerFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/AssetManagement/AssetPaths.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/AssetManagement/AssetProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/AssetManagement/IAssetProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/StaticData/IStaticData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Configurations/Enemy/EnemyConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Bootstrapper.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/GameStateMachineInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/IEnemySpawnerFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/MushroomFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/EnemyFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/IWorldService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/WorldInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/SpawnSystem/EnemySpawnSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/LoadLevelState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/World/IWorldService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/World/WorldService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Startup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/BootstrapInstaller.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="2RPSqkVV7VNuYju2XMdloF5hJwq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -93,6 +138,8 @@
       <workItem from="1687191662790" duration="251000" />
       <workItem from="1687192000929" duration="5852000" />
       <workItem from="1687234956268" duration="10870000" />
+      <workItem from="1687247890357" duration="1317000" />
+      <workItem from="1687258702741" duration="16235000" />
     </task>
     <servers />
   </component>
@@ -101,6 +148,18 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
@@ -109,17 +168,21 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="149" key="Rider.ProjectTemplateDialog.Size/0.0.1536.834@0.0.1536.834" timestamp="1687191607401" />
-    <state x="601" y="119" key="RiderGenerateDialog" timestamp="1687237462430">
+    <state x="601" y="119" key="RiderGenerateDialog" timestamp="1687269397341">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="601" y="119" key="RiderGenerateDialog/0.0.1536.834@0.0.1536.834" timestamp="1687237462430" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1687246797489">
+    <state x="601" y="119" key="RiderGenerateDialog/0.0.1536.834@0.0.1536.834" timestamp="1687269397341" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1687286202978">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1536.834@0.0.1536.834" timestamp="1687246797489" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1687245610842">
+    <state width="498" height="446" key="SwitcherDM/0.0.1536.834@0.0.1536.834" timestamp="1687286202978" />
+    <state x="425" y="189" key="run.anything.popup" timestamp="1687273792824">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1687245610842" />
+    <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1687273792824" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1687267866692">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1687267866692" />
   </component>
 </project>
