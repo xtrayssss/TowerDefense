@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="70804a87-b71e-445a-95f1-8a3a8a4eb776" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.State/IState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BootstrapInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/IService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UnityComponents/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Core/Utilities/CoroutineRunner.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/BootStrapper.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bootstrapper.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/IGameStateSwitcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameGameStateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/LoadLevelGameState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/Services.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/ServicesInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/ProjectInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/GameGameStateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Startup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Startup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/GameFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/EnemySpawnerFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/Test.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Game.cs" />
+        <option value="$PROJECT_DIR$/Assets/BootstrapInstaller.CoroutineRunner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/BootStrappingInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/StatesInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/GameStateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/LoadLevelGameState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Load/ISceneLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Coroutuines/CoroutineRunner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Bootstrapper.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameStateMachineInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Load/SceneLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/BootstrapInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/LoadLevelState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Coroutines/CoroutineRunner.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2RPSqkVV7VNuYju2XMdloF5hJwq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="70804a87-b71e-445a-95f1-8a3a8a4eb776" name="Default Changelist" comment="" />
+      <created>1687150431529</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687150431529</updated>
+      <workItem from="1687150432539" duration="7447000" />
+      <workItem from="1687176999482" duration="8189000" />
+      <workItem from="1687191521284" duration="89000" />
+      <workItem from="1687191662790" duration="251000" />
+      <workItem from="1687192000929" duration="5852000" />
+      <workItem from="1687234956268" duration="10870000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="149" key="Rider.ProjectTemplateDialog.Size" timestamp="1687191607401">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="149" key="Rider.ProjectTemplateDialog.Size/0.0.1536.834@0.0.1536.834" timestamp="1687191607401" />
+    <state x="601" y="119" key="RiderGenerateDialog" timestamp="1687237462430">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="601" y="119" key="RiderGenerateDialog/0.0.1536.834@0.0.1536.834" timestamp="1687237462430" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1687246797489">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1536.834@0.0.1536.834" timestamp="1687246797489" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1687245610842">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1687245610842" />
+  </component>
+</project>
