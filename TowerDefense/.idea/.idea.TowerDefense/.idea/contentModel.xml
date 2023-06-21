@@ -998,6 +998,7 @@
             </e>
             <e p="EnemySpawn" t="Include">
               <e p="EnemySpawn.cs" t="Include" />
+              <e p="SpawnRequest.cs" t="Include" />
               <e p="Wave.cs" t="Include" />
             </e>
             <e p="Health" t="Include">
@@ -1010,6 +1011,8 @@
           </e>
           <e p="Editor" t="Include">
             <e p="EnemySpawnerEditor.cs" t="Include" />
+            <e p="GameDataEditor.cs" t="Include" />
+            <e p="LevelDataEditor.cs" t="Include" />
           </e>
           <e p="Infrastructure" t="Include">
             <e p="BootStrapper.cs" t="Include" />
@@ -1062,6 +1065,7 @@
               </e>
               <e p="StaticData" t="Include">
                 <e p="IStaticData.cs" t="Include" />
+                <e p="StaticData.cs" t="Include" />
               </e>
               <e p="World" t="Include">
                 <e p="IWorldService.cs" t="Include" />
@@ -1078,6 +1082,17 @@
             <e p="Configurations" t="Include">
               <e p="Enemy" t="Include">
                 <e p="EnemyConfiguration.cs" t="Include" />
+                <e p="SpawnerConfiguration.cs" t="Include" />
+              </e>
+              <e p="Game" t="Include">
+                <e p="GameConfiguration.cs" t="Include" />
+              </e>
+              <e p="Level" t="Include">
+                <e p="LevelConfiguration.cs" t="Include" />
+              </e>
+              <e p="Wave" t="Include">
+                <e p="WaveConfiguration.cs" t="Include" />
+                <e p="WaveData.cs" t="Include" />
               </e>
             </e>
             <e p="Enemies" t="Include">

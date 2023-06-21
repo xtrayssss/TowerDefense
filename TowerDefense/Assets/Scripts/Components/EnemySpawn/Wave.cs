@@ -1,4 +1,5 @@
 ﻿using UnityComponents.Enemies;
+using UnityEngine;
 
 namespace Components.EnemySpawn
 {
@@ -7,5 +8,6 @@ namespace Components.EnemySpawn
         public EnemyTypeId[] EnemiesTypeId;
 
         public float AmountEnemies;
+        public Vector2 Position;
     }
 }

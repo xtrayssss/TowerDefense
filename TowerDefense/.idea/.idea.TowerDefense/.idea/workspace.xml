@@ -38,21 +38,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/BootStrapper.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Bootstrapper.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/IGameStateSwitcher.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameGameStateMachine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/LoadLevelGameState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/Services.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/ServicesInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/IntegrationTests/SceneTests/TestDestructionOrder/ProjectInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/GameGameStateMachine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Startup.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/GameFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/Test.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Game.cs" />
-        <option value="$PROJECT_DIR$/Assets/BootstrapInstaller.CoroutineRunner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/BootStrappingInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/StatesInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/GameStateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/LoadLevelGameState.cs" />
@@ -69,26 +54,41 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawnPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/EnemySpawnerEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Enemies/EnemyTypeId.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/EnemySpawnPoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/EnemySpawnerFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/AssetManagement/AssetPaths.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/AssetManagement/AssetProvider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/AssetManagement/IAssetProvider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/StaticData/IStaticData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Configurations/Enemy/EnemyConfiguration.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Bootstrapper.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/GameStateMachineInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/IEnemySpawnerFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/MushroomFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/EnemyFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/IWorldService.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/WorldInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/SpawnSystem/EnemySpawnSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/LoadLevelState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/World/IWorldService.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/World/WorldService.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Startup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/BootstrapInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/EnemySpawnPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Configurations/Level/WaveConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Configurations/Level/LevelConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Configurations/Level/WaveData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Configurations/WaveConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/AssetManagement/AssetProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/AssetManagement/IAssetProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/StaticData/StaticData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/StaticData/IStaticData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/IEnemySpawnerFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/SpawnerDataEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Configurations/LevelConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Configurations/GameConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/EnemySpawnerDataEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/GameDataEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/AssetManagement/AssetPaths.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/LevelDataEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/LoadLevelState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Startup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/EnemyFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/IEnemyFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/SpawnSystem/EnemySpawnSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/EnemySpawn/Wave.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/EnemySpawnerFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Configurations/Enemy/SpawnerConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/IMushroomFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/MushroomFactory.cs" />
       </list>
     </option>
   </component>
@@ -102,6 +102,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -140,6 +141,7 @@
       <workItem from="1687234956268" duration="10870000" />
       <workItem from="1687247890357" duration="1317000" />
       <workItem from="1687258702741" duration="16235000" />
+      <workItem from="1687319553142" duration="15506000" />
     </task>
     <servers />
   </component>
@@ -164,25 +166,29 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1687324257107">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1687324257107" />
     <state x="361" y="149" key="Rider.ProjectTemplateDialog.Size" timestamp="1687191607401">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="149" key="Rider.ProjectTemplateDialog.Size/0.0.1536.834@0.0.1536.834" timestamp="1687191607401" />
-    <state x="601" y="119" key="RiderGenerateDialog" timestamp="1687269397341">
+    <state x="601" y="119" key="RiderGenerateDialog" timestamp="1687322383696">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="601" y="119" key="RiderGenerateDialog/0.0.1536.834@0.0.1536.834" timestamp="1687269397341" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1687286202978">
+    <state x="601" y="119" key="RiderGenerateDialog/0.0.1536.834@0.0.1536.834" timestamp="1687322383696" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1687334949907">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1536.834@0.0.1536.834" timestamp="1687286202978" />
-    <state x="425" y="189" key="run.anything.popup" timestamp="1687273792824">
+    <state width="498" height="446" key="SwitcherDM/0.0.1536.834@0.0.1536.834" timestamp="1687334949907" />
+    <state x="425" y="189" width="672" height="677" key="run.anything.popup" timestamp="1687329408021">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1687273792824" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1687267866692">
+    <state x="425" y="189" width="672" height="677" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1687329408021" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1687332607505">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1687267866692" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1687332607505" />
   </component>
 </project>

@@ -5,6 +5,6 @@ namespace UnityComponents
 {
     public class EnemySpawnPoint : MonoBehaviour
     {
-        [SerializeField] private EnemyTypeId[] enemyTypeId;
+        public EnemyTypeId[] enemiesTypeId;
     }
 }

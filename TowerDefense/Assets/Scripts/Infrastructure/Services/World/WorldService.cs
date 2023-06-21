@@ -6,7 +6,7 @@ namespace Infrastructure.Services.World
     {
         public EcsWorld World { get; private set; }
 
-        public WorldService() =>
+        public WorldService() => 
             InitializeWorld();
 
         private void InitializeWorld() =>

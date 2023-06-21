@@ -9,7 +9,7 @@ namespace Systems.SpawnSystem
         private readonly IEnemyFactory _enemyFactory;
         private readonly EcsWorld _world;
 
-        private readonly EcsFilter<EnemySpawn, Wave> _filter;
+        private readonly EcsFilter<EnemySpawn, Wave, SpawnRequest> _filter;
 
         public EnemySpawnSystem(IEnemyFactory enemyFactory) =>
             _enemyFactory = enemyFactory;
@@ -18,10 +18,9 @@ namespace Systems.SpawnSystem
         {
             foreach (int index in _filter)
             {
-                ref var enemySpawn = ref _filter.Get1(index);
                 ref var wave = ref _filter.Get2(index);
 
-                _enemyFactory.CreateEnemy(_world, wave.EnemiesTypeId, wave.AmountEnemies);
+                _enemyFactory.CreateEnemy(_world, wave.EnemiesTypeId, wave.AmountEnemies, wave.Position);
             }
         }
     }

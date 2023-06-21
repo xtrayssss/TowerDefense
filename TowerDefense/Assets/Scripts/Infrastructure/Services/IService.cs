@@ -1,6 +1,6 @@
 ﻿namespace Infrastructure.Services
 {
-    internal interface IService
+    public interface IService
     {
     }
 }

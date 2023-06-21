@@ -1,8 +1,9 @@
 ﻿namespace Infrastructure.Services.AssetManagement
 {
-    internal static class AssetPaths
+    public static class AssetPaths
     {
+        public const string EnemySpawnerDataPath = "Data/Level/Spawners";
+        public const string LevelDataPath = "Data/Level";
         public const string EnemiesDataPath = "Data";
-        public const string EnemySpawnerPath = "EnemySpawner/EnemySpawner";
     }
 }

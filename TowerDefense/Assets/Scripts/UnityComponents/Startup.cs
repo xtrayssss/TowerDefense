@@ -1,4 +1,5 @@
 using Systems.SpawnSystem;
+using Components.EnemySpawn;
 using Infrastructure.Services.Factories;
 using Infrastructure.Services.World;
 using Leopotam.Ecs;
@@ -39,14 +40,16 @@ namespace UnityComponents
             _fixedUpdateSystems.Init();
         }
 
-        private void AddOneFrames()
-        {
-        }
-
         private void AddSystems()
         {
             _updateSystems
                 .Add(new EnemySpawnSystem(_enemyFactory));
+        }
+
+        private void AddOneFrames()
+        {
+            _updateSystems
+                .OneFrame<SpawnRequest>();
         }
 
         private void Update() =>

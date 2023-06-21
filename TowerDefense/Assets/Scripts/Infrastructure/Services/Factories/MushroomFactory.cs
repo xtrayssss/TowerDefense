@@ -6,7 +6,6 @@ using Leopotam.Ecs;
 using UnityComponents.Configurations.Enemy;
 using UnityComponents.Enemies;
 using UnityEngine;
-using Zenject;
 
 namespace Infrastructure.Services.Factories
 {
@@ -23,54 +22,57 @@ namespace Infrastructure.Services.Factories
             switch (enemyTypeId)
             {
                 case EnemyTypeId.MushroomLevel1:
-                    return CreateMushroomFirstLevel(world, enemyConfiguration, at: position);
+                    return CreateMushroomFirstLevel(world, enemyConfiguration, position);
                 case EnemyTypeId.MushroomLevel2:
-                    return CreateMushroomSecondLevel(world, enemyConfiguration, at: position);
+                    return CreateMushroomSecondLevel(world, enemyConfiguration, position);
                 case EnemyTypeId.MushroomLevel3:
-                    return CreateMushroomThirdLevel(world, enemyConfiguration, at: position);
+                    return CreateMushroomThirdLevel(world, enemyConfiguration, position);
             }
 
             return null;
         }
 
         private GameObject CreateMushroomFirstLevel(EcsWorld world, EnemyConfiguration enemyConfiguration,
-            Vector2 at)
+            Vector2 position)
         {
             EcsEntity entity = world.NewEntity();
 
             GameObject mushroomGO = _spawnService.Instantiate(enemyConfiguration.Prefab);
 
-            BaseConfiguration(entity, mushroomGO, enemyConfiguration);
+            BaseConfiguration(entity, mushroomGO, enemyConfiguration, at: position);
 
             return mushroomGO;
         }
 
         private GameObject CreateMushroomSecondLevel(EcsWorld world, EnemyConfiguration enemyConfiguration,
-            Vector2 at)
+            Vector2 position)
         {
             EcsEntity entity = world.NewEntity();
 
             GameObject mushroomGO = _spawnService.Instantiate(enemyConfiguration.Prefab);
 
-            BaseConfiguration(entity, mushroomGO, enemyConfiguration);
+            BaseConfiguration(entity, mushroomGO, enemyConfiguration, at: position);
 
             return mushroomGO;
         }
 
         private GameObject CreateMushroomThirdLevel(EcsWorld world, EnemyConfiguration enemyConfiguration,
-            Vector2 at)
+            Vector2 position)
         {
             EcsEntity entity = world.NewEntity();
 
             GameObject mushroomGO = _spawnService.Instantiate(enemyConfiguration.Prefab);
 
-            BaseConfiguration(entity, mushroomGO, enemyConfiguration);
+            BaseConfiguration(entity, mushroomGO, enemyConfiguration, at: position);
 
             return mushroomGO;
         }
 
-        private void BaseConfiguration(EcsEntity entity, GameObject mushroomGO, EnemyConfiguration enemyConfiguration)
+        private void BaseConfiguration(EcsEntity entity, GameObject mushroomGO, EnemyConfiguration enemyConfiguration,
+            Vector2 at)
         {
+            mushroomGO.transform.position = at;
+
             ref var damage = ref entity.Get<Damage>();
             damage.AppliedDamage = enemyConfiguration.Damage;
 
@@ -83,10 +85,6 @@ namespace Infrastructure.Services.Factories
 
             ref var rigidbodyComponent = ref entity.Get<RigidbodyComponent>();
             rigidbodyComponent.Rigidbody = mushroomGO.GetComponent<Rigidbody2D>();
-        }
-
-        public class Factory : PlaceholderFactory<MushroomFactory>
-        {
         }
     }
 }

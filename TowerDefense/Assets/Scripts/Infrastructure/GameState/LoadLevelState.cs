@@ -1,7 +1,8 @@
 ﻿using Infrastructure.Load;
 using Infrastructure.Services;
 using Infrastructure.Services.Factories;
-using Infrastructure.Services.World;
+using Infrastructure.Services.StaticData;
+using UnityEngine.SceneManagement;
 using Zenject;
 
 namespace Infrastructure.GameState
@@ -11,15 +12,15 @@ namespace Infrastructure.GameState
         private readonly IGameStateMachine _gameStateMachine;
         private readonly ISceneLoader _sceneLoader;
         private readonly IEnemySpawnerFactory _enemySpawnerFactory;
-        private readonly IWorldService _worldService;
+        private readonly IStaticData _staticData;
 
         public LoadLevelState(IGameStateMachine gameStateMachine, ISceneLoader sceneLoader,
-            IEnemySpawnerFactory enemySpawnerFactory, IWorldService worldService)
+            IEnemySpawnerFactory enemySpawnerFactory, IStaticData staticData)
         {
             _gameStateMachine = gameStateMachine;
             _sceneLoader = sceneLoader;
             _enemySpawnerFactory = enemySpawnerFactory;
-            _worldService = worldService;
+            _staticData = staticData;
         }
 
         public void Enter() =>
@@ -31,9 +32,13 @@ namespace Infrastructure.GameState
 
         private void OnLoaded()
         {
-            //Debug.Log(_worldService.CreateWorld());
-            //_enemySpawnerFactory.CreateSpawner();
+            _staticData.LoadLevelData();
+            _staticData.LoadEnemiesData();
+            _enemySpawnerFactory.CreateSpawners(GetActiveScene());
         }
+
+        private string GetActiveScene() =>
+            SceneManager.GetActiveScene().name;
 
         public class Factory : PlaceholderFactory<IGameStateMachine, LoadLevelState>
         {

@@ -1,6 +1,7 @@
 ﻿using Infrastructure.Services.Random;
 using Infrastructure.Services.StaticData;
 using Leopotam.Ecs;
+using Unity.VisualScripting;
 using UnityComponents.Configurations.Enemy;
 using UnityComponents.Enemies;
 using UnityEngine;
@@ -20,13 +21,13 @@ namespace Infrastructure.Services.Factories
             _mushroomFactory = mushroomFactory;
         }
 
-        public void CreateEnemy(EcsWorld world, EnemyTypeId[] enemiesTypeId, float amountEnemies)
+        public void CreateEnemy(EcsWorld world, EnemyTypeId[] enemiesTypeId, float amountEnemies, Vector2 at)
         {
             for (int i = 0; i < amountEnemies; i++)
             {
                 EnemyTypeId randomEnemyType = _randomService.GetRandomElement(enemiesTypeId);
                 EnemyConfiguration enemyConfiguration = _staticData.GetEnemyData(randomEnemyType);
-                _mushroomFactory.SpawnMushroom(world, randomEnemyType, enemyConfiguration, Vector2.zero);
+                _mushroomFactory.SpawnMushroom(world, randomEnemyType, enemyConfiguration, at);
             }
         }
     }
