@@ -4,8 +4,8 @@ using Infrastructure.Services.AssetManagement;
 using UnityComponents.Configurations;
 using UnityComponents.Configurations.Enemy;
 using UnityComponents.Configurations.Level;
-using UnityComponents.Configurations.Wave;
 using UnityComponents.Enemies;
+using UnityEngine;
 
 namespace Infrastructure.Services.StaticData
 {
@@ -23,11 +23,15 @@ namespace Infrastructure.Services.StaticData
             _enemyData = _assetProvider.LoadAllResources<EnemyConfiguration>(AssetPaths.EnemiesDataPath)
                 .ToDictionary(x => x.EnemyTypeId, x => x);
 
-        public WaveConfiguration GetWaveData() =>
-            new WaveConfiguration();
-
         public LevelConfiguration GetLevelData(string sceneKey) =>
             _levelData.TryGetValue(sceneKey, out LevelConfiguration data) ? data : null;
+
+        public Vector3[] GetWayPoints() =>
+            _assetProvider.LoadAllResources<LevelConfiguration>(AssetPaths.LevelDataPath)[0].spawnConfigurations[0]
+                .wayPoints;
+
+        public PlayerConfiguration GetPlayerData() => 
+            _assetProvider.LoadResource<PlayerConfiguration>(AssetPaths.PlayerPath);
 
         public void LoadLevelData() =>
             _levelData = _assetProvider.LoadAllResources<LevelConfiguration>(AssetPaths.LevelDataPath)

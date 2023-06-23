@@ -1,12 +1,12 @@
-﻿using Components.EnemySpawn;
+﻿using System.Collections.Generic;
+using Components.EnemySpawn;
+using Components.Movement;
+using Components.WayPoints;
 using Infrastructure.Services.AssetManagement;
 using Infrastructure.Services.StaticData;
 using Infrastructure.Services.World;
 using Leopotam.Ecs;
-using UnityComponents.Configurations;
-using UnityComponents.Configurations.Enemy;
 using UnityComponents.Configurations.Level;
-using UnityEngine;
 
 namespace Infrastructure.Services.Factories
 {
@@ -26,16 +26,27 @@ namespace Infrastructure.Services.Factories
         {
             LevelConfiguration levelData = _staticData.GetLevelData(sceneKey);
 
-            foreach (SpawnerConfiguration spawnerData in levelData.enemySpawnerData)
+            List<SpawnConfiguration> spawnConfigurations = levelData.spawnConfigurations;
+
+            foreach (var spawnConfiguration in spawnConfigurations)
             {
                 EcsEntity entity = _worldService.World.NewEntity();
-
+                
                 ref var wave = ref entity.Get<Wave>();
+                wave.Waves = spawnConfiguration.waveConfigurations;
+                wave.CurrentWave = wave.Waves[wave.IndexWave];
+
                 ref var enemySpawn = ref entity.Get<EnemySpawn>();
-                wave.AmountEnemies = spawnerData.waveData[0].amountEnemies;
-                wave.EnemiesTypeId = spawnerData.waveData[0].spawnData.enemiesTypeId;
-                wave.Position = spawnerData.position;
-                entity.Get<SpawnRequest>();
+                enemySpawn.SpawnPosition = spawnConfiguration.position;
+                enemySpawn.SpawnCoolDown = spawnConfiguration.waveConfigurations[0].SpawnCoolDown;
+                
+                ref var wayPoints = ref entity.Get<WayPoints>();
+                wayPoints.AllWayPoints = spawnConfiguration.wayPoints;
+                wayPoints.CurrentPoint = spawnConfiguration.wayPoints[0];
+
+                entity.Get<TargetComponent>().Target = wayPoints.CurrentPoint;
+
+                entity.Get<SelfSpawnRequest>();
             }
         }
     }

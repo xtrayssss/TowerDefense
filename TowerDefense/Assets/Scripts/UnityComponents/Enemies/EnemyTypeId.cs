@@ -8,6 +8,7 @@
         MushroomLevel4,
         MushroomLevel5,
         MushroomLevel6,
-        MushroomLevel7
+        MushroomLevel7,
+        PyramidLevel1
     }
 }

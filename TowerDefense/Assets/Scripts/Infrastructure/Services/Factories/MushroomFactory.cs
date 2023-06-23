@@ -1,77 +1,42 @@
 ﻿using Components.Damage;
 using Components.Health;
+using Components.Model;
 using Components.Movement;
-using Infrastructure.Services.Spawn;
+using Components.Tags;
 using Leopotam.Ecs;
 using UnityComponents.Configurations.Enemy;
-using UnityComponents.Enemies;
+using UnityComponents.Views;
 using UnityEngine;
+using Zenject;
+using WayPoints = Components.WayPoints.WayPoints;
 
 namespace Infrastructure.Services.Factories
 {
     internal class MushroomFactory : IMushroomFactory
     {
-        private readonly ISpawnService _spawnService;
-
-        public MushroomFactory(ISpawnService spawnService) =>
-            _spawnService = spawnService;
-
-        public GameObject SpawnMushroom(EcsWorld world, EnemyTypeId enemyTypeId, EnemyConfiguration enemyConfiguration,
-            Vector2 position)
-        {
-            switch (enemyTypeId)
-            {
-                case EnemyTypeId.MushroomLevel1:
-                    return CreateMushroomFirstLevel(world, enemyConfiguration, position);
-                case EnemyTypeId.MushroomLevel2:
-                    return CreateMushroomSecondLevel(world, enemyConfiguration, position);
-                case EnemyTypeId.MushroomLevel3:
-                    return CreateMushroomThirdLevel(world, enemyConfiguration, position);
-            }
-
-            return null;
-        }
-
-        private GameObject CreateMushroomFirstLevel(EcsWorld world, EnemyConfiguration enemyConfiguration,
-            Vector2 position)
+        public void SpawnEnemy(EcsWorld world, EnemyConfiguration enemyConfiguration,
+            Vector2 spawnPosition,
+            EcsEntity spawnerEntity, DiContainer diContainer)
         {
             EcsEntity entity = world.NewEntity();
 
-            GameObject mushroomGO = _spawnService.Instantiate(enemyConfiguration.Prefab);
+            GameObject mushroomGO =
+                diContainer.InstantiatePrefab(enemyConfiguration.Prefab, spawnPosition, Quaternion.identity, null);
 
-            BaseConfiguration(entity, mushroomGO, enemyConfiguration, at: position);
+            entity.Get<EnemyTag>();
+            entity.Get<Model>().ModelGO = mushroomGO;
 
-            return mushroomGO;
-        }
+            mushroomGO.GetComponent<EntityView>().Construct(entity);
 
-        private GameObject CreateMushroomSecondLevel(EcsWorld world, EnemyConfiguration enemyConfiguration,
-            Vector2 position)
-        {
-            EcsEntity entity = world.NewEntity();
+            ref var wayPoints = ref entity.Get<WayPoints>();
+            wayPoints = spawnerEntity.Get<WayPoints>();
+            wayPoints.MinDistance = enemyConfiguration.MINDistanceToPoint;
 
-            GameObject mushroomGO = _spawnService.Instantiate(enemyConfiguration.Prefab);
+            entity.Get<TargetComponent>().Target = wayPoints.CurrentPoint;
 
-            BaseConfiguration(entity, mushroomGO, enemyConfiguration, at: position);
+            entity.Get<MovementDirection>();
 
-            return mushroomGO;
-        }
-
-        private GameObject CreateMushroomThirdLevel(EcsWorld world, EnemyConfiguration enemyConfiguration,
-            Vector2 position)
-        {
-            EcsEntity entity = world.NewEntity();
-
-            GameObject mushroomGO = _spawnService.Instantiate(enemyConfiguration.Prefab);
-
-            BaseConfiguration(entity, mushroomGO, enemyConfiguration, at: position);
-
-            return mushroomGO;
-        }
-
-        private void BaseConfiguration(EcsEntity entity, GameObject mushroomGO, EnemyConfiguration enemyConfiguration,
-            Vector2 at)
-        {
-            mushroomGO.transform.position = at;
+            entity.Get<SelfCalculatedDirectionRequest>();
 
             ref var damage = ref entity.Get<Damage>();
             damage.AppliedDamage = enemyConfiguration.Damage;
@@ -85,6 +50,10 @@ namespace Infrastructure.Services.Factories
 
             ref var rigidbodyComponent = ref entity.Get<RigidbodyComponent>();
             rigidbodyComponent.Rigidbody = mushroomGO.GetComponent<Rigidbody2D>();
+        }
+
+        public class Factory : PlaceholderFactory<MushroomFactory>
+        {
         }
     }
 }

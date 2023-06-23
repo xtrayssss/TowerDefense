@@ -1,13 +1,14 @@
-﻿using UnityComponents.Enemies;
-using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityComponents.Configurations.Wave;
 
 namespace Components.EnemySpawn
 {
     internal struct Wave
     {
-        public EnemyTypeId[] EnemiesTypeId;
+        public List<WaveConfiguration> Waves;
 
-        public float AmountEnemies;
-        public Vector2 Position;
+        public WaveConfiguration CurrentWave;
+
+        public int IndexWave;
     }
 }

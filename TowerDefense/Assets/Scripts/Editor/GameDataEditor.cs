@@ -14,15 +14,12 @@ namespace Editor
         {
             base.OnInspectorGUI();
 
-            GameConfiguration gameConfiguration = target as GameConfiguration;
+            GameConfiguration gameConfiguration = (GameConfiguration) target;
 
             if (GUILayout.Button("Collect"))
             {
-                if (gameConfiguration != null)
-                    gameConfiguration.levelData =
-                        Resources.LoadAll<LevelConfiguration>(AssetPaths.LevelDataPath).ToList();
-                else
-                    Debug.LogError("GameDataNotExist");
+                gameConfiguration.levelData =
+                    Resources.LoadAll<LevelConfiguration>(AssetPaths.LevelDataPath).ToList();
             }
 
             EditorUtility.SetDirty(target);

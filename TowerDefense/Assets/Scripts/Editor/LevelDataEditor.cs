@@ -1,6 +1,5 @@
 ﻿using System.Linq;
-using Infrastructure.Services.AssetManagement;
-using UnityComponents.Configurations.Enemy;
+using UnityComponents;
 using UnityComponents.Configurations.Level;
 using UnityEditor;
 using UnityEngine;
@@ -20,10 +19,6 @@ namespace Editor
             if (GUILayout.Button("Collect"))
             {
                 levelConfiguration.sceneName = GetActiveSceneName();
-
-                levelConfiguration.enemySpawnerData = Resources
-                    .LoadAll<SpawnerConfiguration>(AssetPaths.EnemySpawnerDataPath)
-                    .Where(x => x.sceneName == GetActiveSceneName()).ToList();
             }
 
             EditorUtility.SetDirty(target);

@@ -1,8 +1,8 @@
 ﻿using UnityComponents.Configurations;
 using UnityComponents.Configurations.Enemy;
 using UnityComponents.Configurations.Level;
-using UnityComponents.Configurations.Wave;
 using UnityComponents.Enemies;
+using UnityEngine;
 
 namespace Infrastructure.Services.StaticData
 {
@@ -10,8 +10,9 @@ namespace Infrastructure.Services.StaticData
     {
         public EnemyConfiguration GetEnemyData(EnemyTypeId enemyTypeId);
         public void LoadEnemiesData();
-        public WaveConfiguration GetWaveData();
         public void LoadLevelData();
         public LevelConfiguration GetLevelData(string sceneKey);
+        public Vector3[] GetWayPoints();
+        public PlayerConfiguration GetPlayerData();
     }
 }

@@ -1,33 +1,61 @@
-﻿using Infrastructure.Services.Random;
+﻿using System.Collections;
+using System.Collections.Generic;
+using Infrastructure.Services.Coroutines;
+using Infrastructure.Services.Random;
 using Infrastructure.Services.StaticData;
 using Leopotam.Ecs;
-using Unity.VisualScripting;
 using UnityComponents.Configurations.Enemy;
 using UnityComponents.Enemies;
 using UnityEngine;
+using Zenject;
 
 namespace Infrastructure.Services.Factories
 {
-    internal class EnemyFactory : IEnemyFactory
+    internal class EnemyFactory : IEnemyFactoryService
     {
         private readonly IStaticData _staticData;
         private readonly IRandomService _randomService;
-        private readonly IMushroomFactory _mushroomFactory;
+        private readonly ICoroutineRunner _coroutineRunner;
+        private readonly DiContainer _container;
 
-        public EnemyFactory(IStaticData staticData, IRandomService randomService, IMushroomFactory mushroomFactory)
+        private readonly Dictionary<EnemyFactoryTypeId, IEnemyFactory> _factories =
+            new Dictionary<EnemyFactoryTypeId, IEnemyFactory>();
+
+        public EnemyFactory(IStaticData staticData, IRandomService randomService, ICoroutineRunner coroutineRunner,
+            MushroomFactory.Factory mushroom, PyramidFactory.Factory pyramid, DiContainer container)
         {
             _staticData = staticData;
             _randomService = randomService;
-            _mushroomFactory = mushroomFactory;
+            _coroutineRunner = coroutineRunner;
+            _container = container;
+
+            MushroomFactory mushroomFactory = mushroom.Create();
+            PyramidFactory pyramidFactory = pyramid.Create();
+
+            _factories.Add(EnemyFactoryTypeId.Mushroom, mushroomFactory);
+            _factories.Add(EnemyFactoryTypeId.Pyramid, pyramidFactory);
         }
 
-        public void CreateEnemy(EcsWorld world, EnemyTypeId[] enemiesTypeId, float amountEnemies, Vector2 at)
+        public void CreateEnemy(EcsWorld world, EnemyTypeId[] enemiesTypeId, float amountEnemies, Vector3 spawnPosition,
+            EcsEntity spawnerEntity, float coolDown) =>
+            _coroutineRunner.StartCoroutine(SpawnCoroutine(world, spawnerEntity, amountEnemies, enemiesTypeId,
+                spawnPosition, coolDown, _container));
+
+        private IEnumerator SpawnCoroutine(EcsWorld world, EcsEntity spawnerEntity, float amountEnemies,
+            EnemyTypeId[] enemiesTypeId, Vector3 spawnPosition, float coolDown, DiContainer diContainer)
         {
-            for (int i = 0; i < amountEnemies; i++)
+            int i = 0;
+
+            while (i < amountEnemies)
             {
                 EnemyTypeId randomEnemyType = _randomService.GetRandomElement(enemiesTypeId);
                 EnemyConfiguration enemyConfiguration = _staticData.GetEnemyData(randomEnemyType);
-                _mushroomFactory.SpawnMushroom(world, randomEnemyType, enemyConfiguration, at);
+
+                _factories[enemyConfiguration.EnemyFactoryTypeId]
+                    .SpawnEnemy(world, enemyConfiguration, spawnPosition, spawnerEntity, diContainer);
+                i++;
+
+                yield return new WaitForSeconds(coolDown);
             }
         }
     }

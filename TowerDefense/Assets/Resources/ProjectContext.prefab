@@ -75,3 +75,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coroutineRunner: {fileID: 321483080937282271, guid: 2e22ee673eea6294a8e184d8e497336f, type: 3}
+  playerView: {fileID: 7097333923602277168, guid: 7f646784116a1a644bc1500ff6c39321, type: 3}

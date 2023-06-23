@@ -7,6 +7,7 @@ using Infrastructure.Services.Random;
 using Infrastructure.Services.Spawn;
 using Infrastructure.Services.StaticData;
 using Infrastructure.Services.World;
+using UnityComponents.Views;
 using UnityEngine;
 using Zenject;
 
@@ -15,6 +16,7 @@ namespace Infrastructure.Installers
     public class BootstrapInstaller : MonoInstaller
     {
         [SerializeField] private CoroutineRunner coroutineRunner;
+        [SerializeField] private PlayerView playerView;
 
         public override void InstallBindings()
         {
@@ -26,10 +28,26 @@ namespace Infrastructure.Installers
             BindStaticDataService();
             BindSpawnService();
             BindMushroomFactory();
+            BindPyramidFactory();
             BindEnemyFactory();
+            PlayerView bindPlayerView = InstantiateBindPlayerView();
+            BindPlayerFactory(bindPlayerView);
             BindEnemySpawnerFactory();
             BindGameStateMachine();
         }
+
+        private void BindPlayerFactory(PlayerView view) =>
+            Container.Bind<IPlayerFactory>().To<PlayerFactory>().AsSingle().WithArguments(view);
+
+        private PlayerView InstantiateBindPlayerView()
+        {
+            PlayerView view = Container.InstantiatePrefabForComponent<PlayerView>(this.playerView);
+            Container.Bind<PlayerView>().FromInstance(view);
+            return view;
+        }
+
+        private void BindPyramidFactory() =>
+            Container.BindFactory<PyramidFactory, PyramidFactory.Factory>();
 
         private void BindWorldService() =>
             Container.Bind<IWorldService>().To<WorldService>().AsSingle().NonLazy();
@@ -47,8 +65,7 @@ namespace Infrastructure.Installers
                 .AsSingle();
 
         private void BindMushroomFactory() =>
-            Container.Bind<IMushroomFactory>().To<MushroomFactory>()
-                .AsSingle();
+            Container.BindFactory<MushroomFactory, MushroomFactory.Factory>();
 
         private void BindStaticDataService() =>
             Container.Bind<IStaticData>().To<StaticData>()
@@ -59,7 +76,7 @@ namespace Infrastructure.Installers
                 .AsSingle();
 
         private void BindEnemyFactory() =>
-            Container.Bind<IEnemyFactory>().To<EnemyFactory>()
+            Container.Bind<IEnemyFactoryService>().To<EnemyFactory>()
                 .AsSingle();
 
         private void BindCoroutineRunner() =>

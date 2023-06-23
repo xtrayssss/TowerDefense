@@ -1,5 +1,10 @@
+using Systems.Destroy;
+using Systems.Move;
 using Systems.SpawnSystem;
+using Systems.WayPoints;
+using Components.Destroy;
 using Components.EnemySpawn;
+using Components.Movement;
 using Infrastructure.Services.Factories;
 using Infrastructure.Services.World;
 using Leopotam.Ecs;
@@ -8,20 +13,20 @@ using Zenject;
 
 namespace UnityComponents
 {
-    sealed class Startup : MonoBehaviour
+    public sealed class Startup : MonoBehaviour
     {
         private EcsSystems _initSystems;
         private EcsSystems _updateSystems;
         private EcsSystems _fixedUpdateSystems;
 
-        private IEnemyFactory _enemyFactory;
+        private IEnemyFactoryService _enemyFactoryService;
         private EcsWorld _world;
 
         [Inject]
-        private void Construct(IEnemyFactory enemyFactory, IWorldService worldService)
+        private void Construct(IEnemyFactoryService enemyFactoryService, IWorldService worldService)
         {
             _world = worldService.World;
-            _enemyFactory = enemyFactory;
+            _enemyFactoryService = enemyFactoryService;
         }
 
         private void Start()
@@ -43,13 +48,25 @@ namespace UnityComponents
         private void AddSystems()
         {
             _updateSystems
-                .Add(new EnemySpawnSystem(_enemyFactory));
+                .Add(new CalculatedDirectionSystem())
+                .Add(new WayPointSettingSystem())
+                .Add(new DestroyModelSystem())
+                .Add(new DestroySystem())
+                .Add(new SettingNextWaveSystem())
+                .Add(new EnemySpawnSystem(_enemyFactoryService));
+
+            _fixedUpdateSystems
+                .Add(new MovementSystem());
         }
 
         private void AddOneFrames()
         {
             _updateSystems
-                .OneFrame<SpawnRequest>();
+                .OneFrame<SelfSpawnRequest>()
+                .OneFrame<SelfCalculatedDirectionRequest>()
+                .OneFrame<SelfDestroyRequest>()
+                .OneFrame<SelfDestroyModelRequest>()
+                .OneFrame<CheckAliveEnemiesRequest>();
         }
 
         private void Update() =>

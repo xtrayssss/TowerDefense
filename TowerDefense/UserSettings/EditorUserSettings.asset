@@ -6,9 +6,12 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
-      value: 515250075c0c595e5f5a5e71122159444e4e4a2f7a7d7f602f284d66b4b76661
+      value: 0007575153020a580c57557748265e4415164c7d7c787467287c1b62e1e16168
       flags: 0
     RecentlyUsedSceneGuid-1:
+      value: 515250075c0c595e5f5a5e71122159444e4e4a2f7a7d7f602f284d66b4b76661
+      flags: 0
+    RecentlyUsedSceneGuid-2:
       value: 0252565151025d59550f097416775e44134f4e7f787c7f642e7c1f37e1e16d6e
       flags: 0
     vcSharedLogLevel:

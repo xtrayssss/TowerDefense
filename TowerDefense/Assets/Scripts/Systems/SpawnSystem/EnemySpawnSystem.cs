@@ -1,26 +1,32 @@
 ﻿using Components.EnemySpawn;
 using Infrastructure.Services.Factories;
 using Leopotam.Ecs;
+using UnityEngine;
 
 namespace Systems.SpawnSystem
 {
     internal class EnemySpawnSystem : IEcsRunSystem
     {
-        private readonly IEnemyFactory _enemyFactory;
+        private readonly IEnemyFactoryService _enemyFactoryService;
         private readonly EcsWorld _world;
 
-        private readonly EcsFilter<EnemySpawn, Wave, SpawnRequest> _filter;
+        private readonly EcsFilter<EnemySpawn, Wave, SelfSpawnRequest> _filter;
 
-        public EnemySpawnSystem(IEnemyFactory enemyFactory) =>
-            _enemyFactory = enemyFactory;
+        public EnemySpawnSystem(IEnemyFactoryService enemyFactoryService) =>
+            _enemyFactoryService = enemyFactoryService;
 
         public void Run()
         {
             foreach (int index in _filter)
             {
-                ref var wave = ref _filter.Get2(index);
+                ref EcsEntity entity = ref _filter.GetEntity(index);
 
-                _enemyFactory.CreateEnemy(_world, wave.EnemiesTypeId, wave.AmountEnemies, wave.Position);
+                ref var wave = ref _filter.Get2(index);
+                ref var enemySpawn = ref _filter.Get1(index);
+
+                Debug.Log("spawn");
+                _enemyFactoryService.CreateEnemy(_world, wave.CurrentWave.EnemiesTypeId, wave.CurrentWave.AmountEnemies,
+                    enemySpawn.SpawnPosition, entity, enemySpawn.SpawnCoolDown);
             }
         }
     }

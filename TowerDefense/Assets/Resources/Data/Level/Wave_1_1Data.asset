@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: Wave_1_1Data
   m_EditorClassIdentifier: 
   amountEnemies: 10
-  spawnData:
-    enemiesTypeId: 000000000100000002000000
-    position: {x: -3, y: 3, z: -9}
+  enemiesTypeId: 000000000100000007000000
+  spawnCoolDown: 1

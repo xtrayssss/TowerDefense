@@ -1,13 +1,6 @@
-﻿using Leopotam.Ecs;
-using UnityComponents.Configurations.Enemy;
-using UnityComponents.Enemies;
-using UnityEngine;
-
-namespace Infrastructure.Services.Factories
+﻿namespace Infrastructure.Services.Factories
 {
-    internal interface IMushroomFactory
+    internal interface IMushroomFactory : IEnemyFactory
     {
-        public GameObject SpawnMushroom(EcsWorld world, EnemyTypeId enemyTypeId, EnemyConfiguration enemyConfiguration,
-            Vector2 at);
     }
 }

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afd9f86cc9f947c3be4dca7d3e302ed4, type: 3}
   m_Name: Level_1Data
   m_EditorClassIdentifier: 
-  enemySpawnerData:
-  - {fileID: 11400000, guid: e6866bcc6dad1cf439b8633dd3c699bd, type: 2}
   sceneName: Level_1
+  spawnConfigurations:
+  - {fileID: 11400000, guid: 44f3a4a5c05041047a6d23d16b4eb2d7, type: 2}
