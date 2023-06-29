@@ -7,6 +7,7 @@ using Infrastructure.Services.StaticData;
 using Infrastructure.Services.World;
 using Leopotam.Ecs;
 using UnityComponents.Configurations.Level;
+using UnityEngine;
 
 namespace Infrastructure.Services.Factories
 {
@@ -31,7 +32,7 @@ namespace Infrastructure.Services.Factories
             foreach (var spawnConfiguration in spawnConfigurations)
             {
                 EcsEntity entity = _worldService.World.NewEntity();
-                
+
                 ref var wave = ref entity.Get<Wave>();
                 wave.Waves = spawnConfiguration.waveConfigurations;
                 wave.CurrentWave = wave.Waves[wave.IndexWave];
@@ -39,7 +40,7 @@ namespace Infrastructure.Services.Factories
                 ref var enemySpawn = ref entity.Get<EnemySpawn>();
                 enemySpawn.SpawnPosition = spawnConfiguration.position;
                 enemySpawn.SpawnCoolDown = spawnConfiguration.waveConfigurations[0].SpawnCoolDown;
-                
+
                 ref var wayPoints = ref entity.Get<WayPoints>();
                 wayPoints.AllWayPoints = spawnConfiguration.wayPoints;
                 wayPoints.CurrentPoint = spawnConfiguration.wayPoints[0];

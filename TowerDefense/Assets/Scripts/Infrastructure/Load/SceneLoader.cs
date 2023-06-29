@@ -13,8 +13,8 @@ namespace Infrastructure.Load
         public SceneLoader(ICoroutineRunner coroutineRunner) =>
             _coroutineRunner = coroutineRunner;
 
-        public void Load<T>(T t, Action onLoaded) => 
-            _coroutineRunner.StartCoroutine(LoadCoroutine(t, onLoaded));
+        public void Load<T>(T sceneKey, Action onLoaded) => 
+            _coroutineRunner.StartCoroutine(LoadCoroutine(sceneKey, onLoaded));
 
         private IEnumerator LoadCoroutine<T>(T t, Action onLoaded)
         {

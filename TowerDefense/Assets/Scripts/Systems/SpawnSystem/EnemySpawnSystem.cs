@@ -1,7 +1,6 @@
 ﻿using Components.EnemySpawn;
 using Infrastructure.Services.Factories;
 using Leopotam.Ecs;
-using UnityEngine;
 
 namespace Systems.SpawnSystem
 {
@@ -24,7 +23,6 @@ namespace Systems.SpawnSystem
                 ref var wave = ref _filter.Get2(index);
                 ref var enemySpawn = ref _filter.Get1(index);
 
-                Debug.Log("spawn");
                 _enemyFactoryService.CreateEnemy(_world, wave.CurrentWave.EnemiesTypeId, wave.CurrentWave.AmountEnemies,
                     enemySpawn.SpawnPosition, entity, enemySpawn.SpawnCoolDown);
             }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   damage: 20
-  speed: 68.1
+  speed: 50
   enemyTypeId: 7
   prefab: {fileID: 6899372199572167957, guid: b93d0c8d4ba2678449250cca012cb0b1, type: 3}
   enemyFactoryTypeId: 1

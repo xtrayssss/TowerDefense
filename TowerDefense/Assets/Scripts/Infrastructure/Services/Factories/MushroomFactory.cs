@@ -16,12 +16,12 @@ namespace Infrastructure.Services.Factories
     {
         public void SpawnEnemy(EcsWorld world, EnemyConfiguration enemyConfiguration,
             Vector2 spawnPosition,
-            EcsEntity spawnerEntity, DiContainer diContainer)
+            EcsEntity spawnerEntity, DiContainer diContainer, Transform parent)
         {
             EcsEntity entity = world.NewEntity();
 
             GameObject mushroomGO =
-                diContainer.InstantiatePrefab(enemyConfiguration.Prefab, spawnPosition, Quaternion.identity, null);
+                diContainer.InstantiatePrefab(enemyConfiguration.Prefab, spawnPosition, Quaternion.identity, parent);
 
             entity.Get<EnemyTag>();
             entity.Get<Model>().ModelGO = mushroomGO;

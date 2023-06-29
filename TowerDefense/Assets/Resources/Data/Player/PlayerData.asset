@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 1401272483326261684, guid: 7f646784116a1a644bc1500ff6c39321, type: 3}
   health: 50
+  startAmountDiamante: 149

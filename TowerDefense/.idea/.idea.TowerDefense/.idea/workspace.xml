@@ -31,64 +31,63 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/IService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/BootstrapInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Core/Utilities/CoroutineRunner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.State/IState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10AFC2FC-7D51-4491-8785-0C2A522CFA9F/f7/100bbb16/GridLayout.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UnityComponents/Startup.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/EnemySpawnPoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/WayPoints.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Configurations/Enemy/WayPoints.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Enemies/WayPoints.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Enemies/EnemySpawnPoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/WayPoints/WayPoints.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/World/WorldService.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Movement/MovementDirection.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/WayPoints/WayPointSettingSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Move/MovementSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Move/CustomCameraShape.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Move/CameraShape.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/IEnemySpawnerFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/EnemyFactoryService.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/GameStateMachine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/IMushroomFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Enemies/EnemyFactoryTypeId.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/EnemySpawn/EnemySpawn.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Configurations/Wave/WaveConfiguration.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Enemies/EnemyTypeId.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Install/MonoInstallerBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Containers/Data/FormData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Containers/FormContainer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/WorldInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/IEnemyFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/IEnemyFactoryService.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/EnemyFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/PlayerInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/IPlayerFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/StaticData/IStaticData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/StaticData/StaticData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/AssetManagement/AssetPaths.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Configurations/PlayerConfiguration.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/LoadLevelState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Configurations/Enemy/Last.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Configurations/Enemy/EnemyConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/WindowInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Spawn/ISpawnService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Spawn/SpawnService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Windows/BaseWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/BootstrapInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/EnemyFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/IWindowFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Configurations/WindowConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/WindowFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Containers/Data/TilemapTypeId.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/ITowerFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/SceneReferenceContainerInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Build/BuildComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Build/BuildTowerSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Windows/BuildWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/AssetManagement/AssetPaths.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/StaticData/StaticData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/StaticData/IStaticData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Init/InitLevelSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/TowerTypeId.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Mouse/RightClickSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Grid/Cell.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Pointers/BuildPointer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Grid/ConvertCellToWorldSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Configurations/TowerData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/UITower/TowerIndicateUISystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/UITower/IndicateTowerIconSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Configurations/PlayerConfiguration.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/PlayerFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Views/PlayerView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Views/MushroomView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Destroy/DestroySystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameState/Bootstrapper.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Move/CalculatedDirectionSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Configurations/Enemy/DeathZone.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Destroy/DestroyModelSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/EnemySpawnerFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/EnemySpawn/Wave.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/PyramidFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Build/WindowBuildTowerSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/SpawnSystem/EnemySpawnSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Towers/TowerView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Movement/TargetComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Move/MovementSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Move/RotationSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Towers/AttackZone.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/TowerFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Move/Nearest.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Configurations/ProjectileConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Configurations/TowerConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Build/FindingNearEnemySystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UnityComponents/Startup.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Destroy/CheckAliveEnemiesRequest.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Destroy/SettingNextWaveSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/MushroomFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Projectile/ProjectileSpawnSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Services/Factories/IProjectileFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Move/CalculatedDirectionSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/TowerInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Move/Foo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Move/Bar.cs" />
       </list>
     </option>
   </component>
@@ -106,6 +105,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Build\TowerDefense.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="D:\games\TowerDefense\TowerDefense\Build" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -143,7 +150,17 @@
       <workItem from="1687258702741" duration="16235000" />
       <workItem from="1687319553142" duration="30049000" />
       <workItem from="1687407354667" duration="26275000" />
-      <workItem from="1687493380859" duration="16276000" />
+      <workItem from="1687493380859" duration="16315000" />
+      <workItem from="1687528937680" duration="5089000" />
+      <workItem from="1687596348059" duration="6593000" />
+      <workItem from="1687686790985" duration="9605000" />
+      <workItem from="1687710154850" duration="3216000" />
+      <workItem from="1687752685857" duration="13271000" />
+      <workItem from="1687778871772" duration="15770000" />
+      <workItem from="1687839098389" duration="16667000" />
+      <workItem from="1687867516056" duration="12614000" />
+      <workItem from="1687925509573" duration="17238000" />
+      <workItem from="1687967437169" duration="5162000" />
     </task>
     <servers />
   </component>
@@ -180,25 +197,33 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="149" key="Rider.ProjectTemplateDialog.Size/0.0.1536.834@0.0.1536.834" timestamp="1687191607401" />
-    <state x="601" y="119" key="RiderGenerateDialog" timestamp="1687497311437">
+    <state x="601" y="119" key="RiderGenerateDialog" timestamp="1687969463492">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="601" y="119" key="RiderGenerateDialog/0.0.1536.834@0.0.1536.834" timestamp="1687497311437" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1687509694669">
+    <state x="601" y="119" key="RiderGenerateDialog/0.0.1536.834@0.0.1536.834" timestamp="1687969463492" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1687968666197">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1536.834@0.0.1536.834" timestamp="1687509694669" />
+    <state width="498" height="446" key="SwitcherDM/0.0.1536.834@0.0.1536.834" timestamp="1687968666197" />
+    <state x="385" y="44" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1687780019290">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="385" y="44" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.834@0.0.1536.834" timestamp="1687780019290" />
+    <state x="586" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1687939359780">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="586" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1687939359780" />
     <state x="406" y="150" width="724" height="534" key="find.popup" timestamp="1687508407961">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="406" y="150" width="724" height="534" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1687508407961" />
-    <state x="425" y="189" width="672" height="677" key="run.anything.popup" timestamp="1687424101791">
+    <state x="425" y="189" width="672" height="677" key="run.anything.popup" timestamp="1687926526791">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="425" y="189" width="672" height="677" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1687424101791" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1687506322184">
+    <state x="425" y="189" width="672" height="677" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1687926526791" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1687942434290">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1687506322184" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1687942434290" />
   </component>
 </project>

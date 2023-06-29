@@ -1,12 +1,11 @@
-﻿using Infrastructure.Services.Spawn;
-using Infrastructure.Services.StaticData;
-using Infrastructure.Services.World;
-using Zenject;
+﻿using Infrastructure.Services.StaticData;
+using Leopotam.Ecs;
+using UnityComponents.Containers;
 
 namespace Infrastructure.Services.Factories
 {
     internal interface IPlayerFactory
     {
-        public void CreatePlayer(IWorldService worldService, ISpawnService spawnService, IStaticData staticData);
+        public void CreatePlayer(EcsWorld world, IStaticData staticData);
     }
 }

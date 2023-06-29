@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Infrastructure.Installers;
 using Infrastructure.Services.Coroutines;
 using Infrastructure.Services.Random;
 using Infrastructure.Services.StaticData;
@@ -16,17 +17,19 @@ namespace Infrastructure.Services.Factories
         private readonly IStaticData _staticData;
         private readonly IRandomService _randomService;
         private readonly ICoroutineRunner _coroutineRunner;
+        private readonly PrefabContainer _parent;
         private readonly DiContainer _container;
 
         private readonly Dictionary<EnemyFactoryTypeId, IEnemyFactory> _factories =
             new Dictionary<EnemyFactoryTypeId, IEnemyFactory>();
 
         public EnemyFactory(IStaticData staticData, IRandomService randomService, ICoroutineRunner coroutineRunner,
-            MushroomFactory.Factory mushroom, PyramidFactory.Factory pyramid, DiContainer container)
+            MushroomFactory.Factory mushroom, PyramidFactory.Factory pyramid, PrefabContainer parent, DiContainer container)
         {
             _staticData = staticData;
             _randomService = randomService;
             _coroutineRunner = coroutineRunner;
+            _parent = parent;
             _container = container;
 
             MushroomFactory mushroomFactory = mushroom.Create();
@@ -52,7 +55,7 @@ namespace Infrastructure.Services.Factories
                 EnemyConfiguration enemyConfiguration = _staticData.GetEnemyData(randomEnemyType);
 
                 _factories[enemyConfiguration.EnemyFactoryTypeId]
-                    .SpawnEnemy(world, enemyConfiguration, spawnPosition, spawnerEntity, diContainer);
+                    .SpawnEnemy(world, enemyConfiguration, spawnPosition, spawnerEntity, diContainer, _parent.transform);
                 i++;
 
                 yield return new WaitForSeconds(coolDown);

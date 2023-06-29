@@ -8,6 +8,6 @@ namespace Infrastructure.Services.Factories
     internal interface IEnemyFactory
     {
         public void SpawnEnemy(EcsWorld world, EnemyConfiguration enemyConfiguration,
-            Vector2 spawnPosition, EcsEntity spawnerEntity, DiContainer diContainer);
+            Vector2 spawnPosition, EcsEntity spawnerEntity, DiContainer diContainer, Transform transform);
     }
 }

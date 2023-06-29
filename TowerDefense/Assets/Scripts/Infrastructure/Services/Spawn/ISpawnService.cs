@@ -6,7 +6,7 @@ namespace Infrastructure.Services.Spawn
     {
         public GameObject Instantiate(GameObject prefab, Vector2 at, Transform parent);
         public GameObject Instantiate(GameObject prefab, Vector2 at);
-        public GameObject Instantiate(GameObject prefab);
+        public T Instantiate<T>(T prefab) where T :  Object;
         public GameObject Instantiate(GameObject prefab, Transform parent);
     }
 }

@@ -10,6 +10,9 @@ namespace Infrastructure.Services.Spawn
         public GameObject Instantiate(GameObject prefab, Vector2 at) =>
             Object.Instantiate(prefab, at, Quaternion.identity);
 
+        public T Instantiate<T>(T prefab) where T : Object => 
+            Object.Instantiate(prefab);
+
         public GameObject Instantiate(GameObject prefab) =>
             Object.Instantiate(prefab);
 

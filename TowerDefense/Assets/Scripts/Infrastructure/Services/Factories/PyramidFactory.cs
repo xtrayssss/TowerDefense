@@ -4,7 +4,6 @@ using Components.Model;
 using Components.Movement;
 using Components.Tags;
 using Components.WayPoints;
-using Infrastructure.Services.Spawn;
 using Leopotam.Ecs;
 using UnityComponents.Configurations.Enemy;
 using UnityComponents.Views;
@@ -17,13 +16,15 @@ namespace Infrastructure.Services.Factories
     {
         public void SpawnEnemy(EcsWorld world, EnemyConfiguration enemyConfiguration,
             Vector2 spawnPosition,
-            EcsEntity spawnerEntity, DiContainer diContainer)
+            EcsEntity spawnerEntity, DiContainer diContainer, Transform parent)
         {
             EcsEntity entity = world.NewEntity();
 
-            GameObject pyramidGO = diContainer.InstantiatePrefab(enemyConfiguration.Prefab);
-            pyramidGO.GetComponent<EntityView>().Construct(entity);
+            GameObject pyramidGO = diContainer.InstantiatePrefab(enemyConfiguration.Prefab, spawnPosition,
+                Quaternion.identity, parent);
             
+            pyramidGO.GetComponent<EntityView>().Construct(entity);
+
             entity.Get<Model>().ModelGO = pyramidGO;
             entity.Get<EnemyTag>();
 

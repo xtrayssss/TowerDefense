@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2746369887301728349, guid: 77670a3e3e11c7e41b7f6b8512921fa9, type: 3}
       propertyPath: m_Name
-      value: BasePyramid
+      value: PyramidLevel_1
       objectReference: {fileID: 0}
     - target: {fileID: 7107045022394530211, guid: 77670a3e3e11c7e41b7f6b8512921fa9, type: 3}
       propertyPath: m_RootOrder
@@ -54,6 +54,14 @@ PrefabInstance:
     - target: {fileID: 7107045022394530211, guid: 77670a3e3e11c7e41b7f6b8512921fa9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9121631349382358123, guid: 77670a3e3e11c7e41b7f6b8512921fa9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6bb94d86cb605c944876999fd9fb52ef, type: 3}
+    - target: {fileID: 9121631349382358123, guid: 77670a3e3e11c7e41b7f6b8512921fa9, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77670a3e3e11c7e41b7f6b8512921fa9, type: 3}

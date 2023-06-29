@@ -1,8 +1,10 @@
-﻿using UnityComponents.Configurations;
+﻿using Systems.Build;
+using Infrastructure.Services.Factories;
+using UnityComponents.Configurations;
 using UnityComponents.Configurations.Enemy;
 using UnityComponents.Configurations.Level;
+using UnityComponents.Containers.Data;
 using UnityComponents.Enemies;
-using UnityEngine;
 
 namespace Infrastructure.Services.StaticData
 {
@@ -12,7 +14,10 @@ namespace Infrastructure.Services.StaticData
         public void LoadEnemiesData();
         public void LoadLevelData();
         public LevelConfiguration GetLevelData(string sceneKey);
-        public Vector3[] GetWayPoints();
         public PlayerConfiguration GetPlayerData();
+        public WindowConfiguration GetWindowData(FormTypeId formTypeId);
+        public void LoadFormData();
+        public TowerConfiguration GetTowerData(TowerTypeId towerTypeId);
+        public void LoadTowerData();
     }
 }

@@ -1,6 +1,11 @@
-﻿namespace Components.Health
+﻿using System;
+using UnityEngine;
+
+namespace Components.Health
 {
-    internal struct Health
+    
+    [Serializable]
+    public struct Health
     {
         public float CurrentHealth;
         public float MaxHealth;

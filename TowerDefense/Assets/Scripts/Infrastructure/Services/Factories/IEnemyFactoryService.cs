@@ -1,8 +1,6 @@
 ﻿using Leopotam.Ecs;
 using UnityComponents.Enemies;
 using UnityEngine;
-using Zenject;
-using WayPoints = Components.WayPoints.WayPoints;
 
 namespace Infrastructure.Services.Factories
 {

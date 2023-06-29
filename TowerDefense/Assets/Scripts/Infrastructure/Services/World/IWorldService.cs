@@ -2,7 +2,7 @@
 
 namespace Infrastructure.Services.World
 {
-    internal interface IWorldService
+    public interface IWorldService
     {
         public EcsWorld World { get; }
     }

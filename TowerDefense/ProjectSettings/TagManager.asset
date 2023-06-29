@@ -14,8 +14,8 @@ TagManager:
   - UI
   - DeathZone
   - DeathTrigger
-  - 
-  - 
+  - TowerAttackZone
+  - Enemy
   - 
   - 
   - 
@@ -56,4 +56,10 @@ TagManager:
     locked: 0
   - name: Buildings
     uniqueID: 1231165123
+    locked: 0
+  - name: VFX
+    uniqueID: 2921343603
+    locked: 0
+  - name: Interface
+    uniqueID: 2594168797
     locked: 0
